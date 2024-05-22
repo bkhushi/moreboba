@@ -9,7 +9,7 @@ import { SideNavItem } from '@/types';
 
 const SideNav = () => {
   return (
-    <div className="bg-white h-screen flex-1 fixed border-r border-zinc-200 hidden md:flex flex-col w-1/4">
+    <div className="bg-white h-screen flex-1 fixed border-r border-zinc-200 hidden md:flex flex-col">
       <div className="flex flex-col space-y-6 w-screen">
         <Link
           href="/"

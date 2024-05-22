@@ -24,9 +24,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`flex-col w:1/10 bg-white${inter.className}`}>
-        <div className="flex p-4 w-1/4">
+        <div className="flex">
           <SideNav />
-          <main className="flex-1 w-3/4">
+          <main className="mx-auto">
             <MarginWidthWrapper>
               <Header />
               {/* <HeaderMobile /> */}
