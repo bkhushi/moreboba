@@ -7,3 +7,9 @@ export type MenuItemWithSubMenuProps = {
     item: SideNavItem;
     toggleOpen: () => void;
 };
+
+export type MenuCard = {
+    image: string;
+    name: string;
+    price: number;
+}

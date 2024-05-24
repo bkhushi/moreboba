@@ -1,5 +1,3 @@
-import { Icon } from '@iconify/react';
-
 import { SideNavItem } from './types';
 
 export const SIDENAV_ITEMS: SideNavItem[] = [
@@ -9,11 +7,11 @@ export const SIDENAV_ITEMS: SideNavItem[] = [
   },
   {
     title: 'Milk Teas',
-    path: '/projects',
+    path: '#Milk Tea',
   },
   {
     title: 'Fruit Teas',
-    path: '/messages',
+    path: '#Fruit Tea',
   },
   {
     title: 'Seasonal Specials',
