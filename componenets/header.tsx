@@ -15,19 +15,19 @@ const Header = () => {
   return (
     <div
       className={cn(
-        `sticky inset-x-0 top-0 z-30 w-full transition-all border-b border-gray-200 flex-end`,
+        `flex sticky inset-x-0 top-0 z-30 w-full transition-all border-b border-gray-200 flex-end`,
         {
           'border-b border-gray-200 bg-white/75 backdrop-blur-lg': scrolled,
           'border-b border-gray-200 bg-white': selectedLayout,
         },
       )}
     >
-      <div className="flex h-[47px] items-center justify-between px-4">
-        <div className="flex items-center space-x-4">
+      <div className="flex h-[47px] justify-end ml-auto  px-4">
+        <div className="space-x-10">
 
           <Link
             href="/"
-            className="flex flex-col space-x-3 items-center justify-center md:hidden"
+            className="flex flex-col space-x-10 items-center justify-center md:hidden px-10"
           >
             <span className="h-7 w-7 bg-zinc-300 rounded-lg" />
             <span className="font-bold text-xl flex "><svg width="50" height="50" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -39,9 +39,10 @@ const Header = () => {
         </div>
 
         <div className="hidden md:block justify-content:flex-end">
-          <div className="h-8 w-8 rounded-full bg-zinc-300 flex items-center justify-end text-center">
-            <span className="font-semibold text-sm">HQ</span>
-          </div>
+          <Link href="/login"
+          className="h-8 w-8 rounded-full bg-zinc-300 flex items-center justify-end text-center">
+            <span className="font-semibold text-lg">Admin</span>
+          </Link>
         </div>
       </div>
     </div>

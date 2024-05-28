@@ -1,10 +1,14 @@
 'use client'
 
-const MCard = (
-    { image }: { image: string },
-    { name }: { name: string },
-    { price }: { price: number },
-)  => {
+interface Props {
+    image: string,
+    name: string,
+    price: string,
+}
+
+const MCard: React.FC<Props> = ({
+    image, name, price
+})  => {
     return (
         <div className="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
             <a href="#">
@@ -13,7 +17,7 @@ const MCard = (
                 <div className="px-4 py-3 w-72">
                     <p className="text-lg font-bold text-black truncate block capitalize">{name}</p>
                     <div className="flex items-center">
-                        <p className="text-lg font-semibold text-black cursor-auto my-3">{price}</p>
+                        <p className="text-lg font-semibold text-black cursor-auto my-3">${price}</p>
                         <div className="ml-auto"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                             fill="currentColor" className="bi bi-bag-plus" viewBox="0 0 16 16">
                             <path fillRule="evenodd"
@@ -26,6 +30,6 @@ const MCard = (
             </a>
         </div>
     );
-}
+};
 
 export default MCard

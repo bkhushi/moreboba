@@ -8,7 +8,6 @@ import HeaderMobile from '@/componenets/header-mobile';
 import MarginWidthWrapper from '@/componenets/margin-width-wrapper';
 import PageWrapper from '@/componenets/page-wrapper';
 import SideNav from '@/componenets/side-nav';
-import MenuWrapper from '@/componenets/menu-wrapper';
 
 const inter = Inter({ subsets: ['latin'] });
 
