@@ -1,6 +1,6 @@
 'use client'
 
-import { addCart } from "@/../dataconnect/moreboba/app/sdks/js"
+import { addCart } from "@/dataconnect/moreboba/app/sdks/js"
 import { useState } from "react";
 
 interface Props {

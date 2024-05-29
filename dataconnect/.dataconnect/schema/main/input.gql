@@ -1,0 +1,104 @@
+scalar Admin_Key
+scalar Cart_Key
+scalar Item_Key
+scalar Section_Key
+input Admin_Data {
+  uid: String
+  uid_expr: String_Expr
+  name: String
+  name_expr: String_Expr
+  password: String
+  password_expr: String_Expr
+}
+input Admin_Filter {
+  _and: [Admin_Filter!]
+  _not: Admin_Filter
+  _or: [Admin_Filter!]
+  uid: String_Filter
+  name: String_Filter
+  password: String_Filter
+}
+input Admin_ListFilter {
+  count: Int_Filter
+  exist: Admin_Filter
+}
+input Admin_Order {
+  uid: OrderDirection
+  name: OrderDirection
+  password: OrderDirection
+}
+input Cart_Data {
+  id: UUID
+  id_expr: UUID_Expr
+  itemName: String
+  itemName_expr: String_Expr
+  item: Item_Key
+}
+input Cart_Filter {
+  _and: [Cart_Filter!]
+  _not: Cart_Filter
+  _or: [Cart_Filter!]
+  id: UUID_Filter
+  itemName: String_Filter
+  item: Item_Filter
+}
+input Cart_ListFilter {
+  count: Int_Filter
+  exist: Cart_Filter
+}
+input Cart_Order {
+  id: OrderDirection
+  itemName: OrderDirection
+  item: Item_Order
+}
+input Item_Data {
+  name: String
+  name_expr: String_Expr
+  sectionName: String
+  sectionName_expr: String_Expr
+  section: Section_Key
+  image: String
+  image_expr: String_Expr
+  price: String
+  price_expr: String_Expr
+}
+input Item_Filter {
+  _and: [Item_Filter!]
+  _not: Item_Filter
+  _or: [Item_Filter!]
+  name: String_Filter
+  sectionName: String_Filter
+  section: Section_Filter
+  image: String_Filter
+  price: String_Filter
+  carts_on_item: Cart_ListFilter
+}
+input Item_ListFilter {
+  count: Int_Filter
+  exist: Item_Filter
+}
+input Item_Order {
+  name: OrderDirection
+  sectionName: OrderDirection
+  section: Section_Order
+  image: OrderDirection
+  price: OrderDirection
+}
+input Section_Data {
+  name: String
+  name_expr: String_Expr
+}
+input Section_Filter {
+  _and: [Section_Filter!]
+  _not: Section_Filter
+  _or: [Section_Filter!]
+  name: String_Filter
+  items_on_section: Item_ListFilter
+}
+input Section_ListFilter {
+  count: Int_Filter
+  exist: Section_Filter
+}
+input Section_Order {
+  name: OrderDirection
+}

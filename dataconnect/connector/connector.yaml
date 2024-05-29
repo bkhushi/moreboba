@@ -1,0 +1,9 @@
+connectorId: "my-connector"
+authMode: "PUBLIC" 
+generate:
+  javascriptSdk:
+    outputDir: "../moreboba/app/sdks/js"
+    package: "@email-manager/emails"
+    packageJsonDir: "../../"
+  webSdk:
+    outputDir: "../moreboba/app/sdks/web"

@@ -1,0 +1,7 @@
+extend type Cart {
+  id: UUID! @default(expr: "uuidV4()")
+  itemName: String
+}
+extend type Item {
+  sectionName: String!
+}

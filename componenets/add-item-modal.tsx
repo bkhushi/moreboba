@@ -1,6 +1,6 @@
 'use client'
 
-import { addItem } from "@/../dataconnect/moreboba/app/sdks/js"
+import { addItem } from "@/dataconnect/moreboba/app/sdks/js"
 import { useState } from "react";
 
 const AddItemModal: React.FC<{ isVisible: boolean, onClose: () => void, section: string }> = ({

@@ -1,0 +1,12 @@
+extend type Item {
+  """
+  ✨ List Cart entries in a one-to-many relationship with this object (i.e. where `Cart.item` equals this object).
+  """
+  carts_on_item(where: Cart_Filter, orderBy: [Cart_Order!], limit: Int = 100): [Cart!]!
+}
+extend type Section {
+  """
+  ✨ List Item entries in a one-to-many relationship with this object (i.e. where `Item.section` equals this object).
+  """
+  items_on_section(where: Item_Filter, orderBy: [Item_Order!], limit: Int = 100): [Item!]!
+}

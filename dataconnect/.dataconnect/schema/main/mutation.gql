@@ -1,0 +1,98 @@
+extend type Mutation {
+  """
+  Insert a single Admin into the table. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  admin_insert(data: Admin_Data!): Admin_Key!
+  """
+  Insert a single Cart into the table. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  cart_insert(data: Cart_Data!): Cart_Key!
+  """
+  Insert a single Item into the table. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  item_insert(data: Item_Data!): Item_Key!
+  """
+  Insert a single Section into the table. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  section_insert(data: Section_Data!): Section_Key!
+  """
+  Insert or update a single Admin into the table, based on the primary key. Returns the key of the newly inserted Admin.
+  """
+  admin_upsert(data: Admin_Data!): Admin_Key!
+  """
+  Insert or update a single Cart into the table, based on the primary key. Returns the key of the newly inserted Cart.
+  """
+  cart_upsert(data: Cart_Data!): Cart_Key!
+  """
+  Insert or update a single Item into the table, based on the primary key. Returns the key of the newly inserted Item.
+  """
+  item_upsert(data: Item_Data!): Item_Key!
+  """
+  Insert or update a single Section into the table, based on the primary key. Returns the key of the newly inserted Section.
+  """
+  section_upsert(data: Section_Data!): Section_Key!
+  """
+  Update a single Admin based on `id` or `key`, setting columns specified in `data`. Returns `null` if not found.
+  """
+  admin_update(key: Admin_Key, data: Admin_Data!): Admin_Key
+  """
+  Update a single Cart based on `id` or `key`, setting columns specified in `data`. Returns `null` if not found.
+  """
+  cart_update(id: UUID, key: Cart_Key, data: Cart_Data!): Cart_Key
+  """
+  Update a single Item based on `id` or `key`, setting columns specified in `data`. Returns `null` if not found.
+  """
+  item_update(key: Item_Key, data: Item_Data!): Item_Key
+  """
+  Update a single Section based on `id` or `key`, setting columns specified in `data`. Returns `null` if not found.
+  """
+  section_update(key: Section_Key, data: Section_Data!): Section_Key
+  """
+  Update Admin entries matching `where` conditions (or `all`, if true) according to `data`. Returns the number of rows updated.
+  """
+  admin_updateMany(where: Admin_Filter, all: Boolean = false, data: Admin_Data!): Int!
+  """
+  Update Cart entries matching `where` conditions (or `all`, if true) according to `data`. Returns the number of rows updated.
+  """
+  cart_updateMany(where: Cart_Filter, all: Boolean = false, data: Cart_Data!): Int!
+  """
+  Update Item entries matching `where` conditions (or `all`, if true) according to `data`. Returns the number of rows updated.
+  """
+  item_updateMany(where: Item_Filter, all: Boolean = false, data: Item_Data!): Int!
+  """
+  Update Section entries matching `where` conditions (or `all`, if true) according to `data`. Returns the number of rows updated.
+  """
+  section_updateMany(where: Section_Filter, all: Boolean = false, data: Section_Data!): Int!
+  """
+  Delete a single Admin based on `id` or `key` and return its key (or `null` if not found).
+  """
+  admin_delete(key: Admin_Key): Admin_Key
+  """
+  Delete a single Cart based on `id` or `key` and return its key (or `null` if not found).
+  """
+  cart_delete(id: UUID, key: Cart_Key): Cart_Key
+  """
+  Delete a single Item based on `id` or `key` and return its key (or `null` if not found).
+  """
+  item_delete(key: Item_Key): Item_Key
+  """
+  Delete a single Section based on `id` or `key` and return its key (or `null` if not found).
+  """
+  section_delete(key: Section_Key): Section_Key
+  """
+  Delete Admin entries matching `where` conditions (or `all`, if true). Returns the number of rows deleted.
+  """
+  admin_deleteMany(where: Admin_Filter, all: Boolean = false): Int!
+  """
+  Delete Cart entries matching `where` conditions (or `all`, if true). Returns the number of rows deleted.
+  """
+  cart_deleteMany(where: Cart_Filter, all: Boolean = false): Int!
+  """
+  Delete Item entries matching `where` conditions (or `all`, if true). Returns the number of rows deleted.
+  """
+  item_deleteMany(where: Item_Filter, all: Boolean = false): Int!
+  """
+  Delete Section entries matching `where` conditions (or `all`, if true). Returns the number of rows deleted.
+  """
+  section_deleteMany(where: Section_Filter, all: Boolean = false): Int!
+}
