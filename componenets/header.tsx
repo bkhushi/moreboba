@@ -26,7 +26,7 @@ const Header = () => {
         <div className="space-x-10">
 
           <Link
-            href="/"
+            href="/cart"
             className="flex flex-col space-x-10 items-center justify-center md:hidden px-10"
           >
             <span className="h-7 w-7 bg-zinc-300 rounded-lg" />

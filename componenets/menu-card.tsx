@@ -1,5 +1,8 @@
 'use client'
 
+import { addCart } from "@/../dataconnect/moreboba/app/sdks/js"
+import { useState } from "react";
+
 interface Props {
     image: string,
     name: string,
@@ -10,6 +13,7 @@ const MCard: React.FC<Props> = ({
     image, name, price
 })  => {
     return (
+
         <div className="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
             <a href="#">
                 <img src= {image}

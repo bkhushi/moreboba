@@ -1,19 +1,30 @@
+'use client'
 import MCard from "@/componenets/menu-card";
+import AddItemModal from "@/componenets/add-item-modal";
+import { Fragment, useState } from "react";
 
 export default function Home() {
+    const [showModal, setShowModal] = useState(false)
     return (
-        <>
-            <span className="font-bold text-4xl text-center">What would you like today?</span>
-            <div className="text-center p-10">
-            </div>
-            <div className="flex space-x-3">
-            <span className="font-bold text-2xl indent-18"> Milk Teas </span>
-            <div className="mt-0.5">  <svg xmlns="http://www.w3.org/2000/svg" width = '30' height = '30' viewBox="0 0 20 20" fill="currentColor">
-                <path fillRule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm.75-11.25a.75.75 0 0 0-1.5 0v2.5h-2.5a.75.75 0 0 0 0 1.5h2.5v2.5a.75.75 0 0 0 1.5 0v-2.5h2.5a.75.75 0 0 0 0-1.5h-2.5v-2.5Z" clipRule="evenodd" />
-            </svg>
-            </div>
-            </div>
-           
+            <>
+            <Fragment>
+                <span className="font-bold text-4xl text-center">What would you like today?</span>
+                <div className="text-center p-10">
+                </div>
+                <div className="flex space-x-3">
+                    <span className="font-bold text-2xl indent-18"> Milk Teas </span>
+                    <div onClick={() =>
+                        setShowModal(true)
+                    } className="mt-0.5 cursor-pointer">  <svg xmlns="http://www.w3.org/2000/svg" width='30' height='30' viewBox="0 0 20 20" fill="currentColor">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm.75-11.25a.75.75 0 0 0-1.5 0v2.5h-2.5a.75.75 0 0 0 0 1.5h2.5v2.5a.75.75 0 0 0 1.5 0v-2.5h2.5a.75.75 0 0 0 0-1.5h-2.5v-2.5Z" clipRule="evenodd" />
+                    </svg>
+                    </div>
+                    <AddItemModal isVisible={showModal} onClose = {() =>
+                    setShowModal(false)} section="Milk Tea" />
+
+                </div>
+            </Fragment>
+
             <section id="Milk Tea"
                 className="w-fit mx-auto grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 justify-items-center justify-center gap-y-20 gap-x-14 mt-10 mb-5">
                 <div>
@@ -35,11 +46,11 @@ export default function Home() {
             </section>
 
             <div className="flex space-x-3">
-            <span className="font-bold text-2xl indent-18"> Fruit Teas </span>
-            <div className="mt-0.5">  <svg xmlns="http://www.w3.org/2000/svg" width = '30' height = '30' viewBox="0 0 20 20" fill="currentColor">
-                <path fillRule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm.75-11.25a.75.75 0 0 0-1.5 0v2.5h-2.5a.75.75 0 0 0 0 1.5h2.5v2.5a.75.75 0 0 0 1.5 0v-2.5h2.5a.75.75 0 0 0 0-1.5h-2.5v-2.5Z" clipRule="evenodd" />
-            </svg>
-            </div>
+                <span className="font-bold text-2xl indent-18"> Fruit Teas </span>
+                <div className="mt-0.5">  <svg xmlns="http://www.w3.org/2000/svg" width='30' height='30' viewBox="0 0 20 20" fill="currentColor">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm.75-11.25a.75.75 0 0 0-1.5 0v2.5h-2.5a.75.75 0 0 0 0 1.5h2.5v2.5a.75.75 0 0 0 1.5 0v-2.5h2.5a.75.75 0 0 0 0-1.5h-2.5v-2.5Z" clipRule="evenodd" />
+                </svg>
+                </div>
             </div>
 
             <section id="Fruit Tea"
