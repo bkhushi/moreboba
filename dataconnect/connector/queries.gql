@@ -57,7 +57,7 @@
 #     }
 #   }
 
-query getItems($sectName: String) {
+query getItems($sectName: String) @auth(level: PUBLIC){
     items(where: {sectionName: {eq: $sectName}}){
         name
         image

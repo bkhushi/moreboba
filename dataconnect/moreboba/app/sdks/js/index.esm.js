@@ -3,7 +3,7 @@ import { getDataConnect, queryRef, mutationRef, executeQuery, executeMutation } 
 export const connectorConfig = {
   connector: 'my-connector',
   service: 'dataconnect',
-  location: 'us-central1'
+  location: 'us-west1'
 };
 
 export function addItemRef(dcOrVars, vars) {

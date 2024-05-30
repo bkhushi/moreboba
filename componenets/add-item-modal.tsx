@@ -19,7 +19,7 @@ const AddItemModal: React.FC<{ isVisible: boolean, onClose: () => void, sectionN
     const handleAddition = async () => {
         try {
             console.log('add item')
-            addItem(dataconnect, { name, image, price, sectionName })
+            addItem(dataconnect, { name, image, price })
             console.log("added item")
         } catch (e) {
             console.error(e + "item error")
