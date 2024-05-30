@@ -3,5 +3,5 @@ extend type Cart {
   itemName: String
 }
 extend type Item {
-  sectionName: String!
+  sectionName: String
 }

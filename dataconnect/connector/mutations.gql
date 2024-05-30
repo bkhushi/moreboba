@@ -29,12 +29,13 @@
 #   recipient_delete(key: {emailId: $emailId, userUid: $uid})
 # }
 
-mutation addItem($name:String, $image: String, $price: String, $section: Section_Key) @auth(level: USER_EMAIL_VERIFIED) {
+mutation addItem($name:String, $image: String, $price: String, $sectionName: String) @auth(level: USER) {
+    
     item_insert(data: {
         name: $name,
         image: $image,
         price: $price,
-        section: $section
+        sectionName: $sectionName
     })
 }
 

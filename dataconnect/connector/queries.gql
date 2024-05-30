@@ -56,3 +56,11 @@
 #     name price image
 #     }
 #   }
+
+query getItems($sectName: String) {
+    items(where: {sectionName: {eq: $sectName}}){
+        name
+        image
+        price
+    }
+}

@@ -34,6 +34,33 @@ exports.editItem = function editItem(dcOrVars, vars) {
   return executeMutation(editItemRef(dcOrVars, vars));
 };
 
+function addCartRef(dcOrVars, vars) {
+  const { dc: dcInstance, vars: inputVars} = validateArgs(dcOrVars, vars);
+  return mutationRef(dcInstance, 'addCart', inputVars);
+}
+exports.addCartRef = addCartRef;
+exports.addCart = function addCart(dcOrVars, vars) {
+  return executeMutation(addCartRef(dcOrVars, vars));
+};
+
+function deleteCartRef(dcOrVars, vars) {
+  const { dc: dcInstance, vars: inputVars} = validateArgs(dcOrVars, vars);
+  return mutationRef(dcInstance, 'deleteCart', inputVars);
+}
+exports.deleteCartRef = deleteCartRef;
+exports.deleteCart = function deleteCart(dcOrVars, vars) {
+  return executeMutation(deleteCartRef(dcOrVars, vars));
+};
+
+function getItemsRef(dcOrVars, vars) {
+  const { dc: dcInstance, vars: inputVars} = validateArgs(dcOrVars, vars);
+  return queryRef(dcInstance, 'getItems', inputVars);
+}
+exports.getItemsRef = getItemsRef;
+exports.getItems = function getItems(dcOrVars, vars) {
+  return executeQuery(getItemsRef(dcOrVars, vars));
+};
+
 function validateArgs(dcOrVars, vars, validateVars) {
   let dcInstance;
   let realVars;

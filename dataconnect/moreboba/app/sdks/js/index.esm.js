@@ -27,6 +27,27 @@ export function editItemRef(dcOrVars, vars) {
 export function editItem(dcOrVars, vars) {
   return executeMutation(editItemRef(dcOrVars, vars));
 }
+export function addCartRef(dcOrVars, vars) {
+  const { dc: dcInstance, vars: inputVars} = validateArgs(dcOrVars, vars);
+  return mutationRef(dcInstance, 'addCart', inputVars);
+}
+export function addCart(dcOrVars, vars) {
+  return executeMutation(addCartRef(dcOrVars, vars));
+}
+export function deleteCartRef(dcOrVars, vars) {
+  const { dc: dcInstance, vars: inputVars} = validateArgs(dcOrVars, vars);
+  return mutationRef(dcInstance, 'deleteCart', inputVars);
+}
+export function deleteCart(dcOrVars, vars) {
+  return executeMutation(deleteCartRef(dcOrVars, vars));
+}
+export function getItemsRef(dcOrVars, vars) {
+  const { dc: dcInstance, vars: inputVars} = validateArgs(dcOrVars, vars);
+  return queryRef(dcInstance, 'getItems', inputVars);
+}
+export function getItems(dcOrVars, vars) {
+  return executeQuery(getItemsRef(dcOrVars, vars));
+}
 function validateArgs(dcOrVars, vars, validateVars) {
   let dcInstance;
   let realVars;

@@ -41,7 +41,7 @@ type Item @table(key: "name") {
     name: String!
     image: String!
     price: String!
-    section: Section!
+    section: Section
 }
 
 type Cart @table {
